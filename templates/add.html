@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title><h1>ADDITION</h1></title>
+    </head>
+    <body>
+        <form action = "/+" method="POST">
+            <p>Enter first number</p>
+            <input type="number" name="First number"><br>
+            <p>Enter second number</p>
+            <input type="number" name="Second number"><br>
+            <button type="submit" name="Add">ADD</button>
+        </form>
+        {%if addition%}
+        Your sum is {{addition}}
+        {%endif addition%}
+    </body>
+</html>
