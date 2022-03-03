@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-app = Flask(__name__, template_folder='templates')
+app = Flask(__name__)
 app.secret_key = 'secret'
 
 @app.route('/')
@@ -7,7 +7,7 @@ def HomePage():
     return "<h1> START CALCULATING </h1>"
 
 @app.route('/+', methods = ['POST', 'GET'])
-def addition():
+def add():
     add = ''
     if request.method=='POST' and 'second' in request.form and 'first' in request.form:
         SN = float(request.form.get('second'))
